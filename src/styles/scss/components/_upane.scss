@@ -1,0 +1,47 @@
+.stui-divider {
+  height: 1px;
+  margin: 6px 0;
+  background: $grey-l1;
+}
+
+.stui-upane {
+  flex: 0 0 40%;
+  padding: 48px;
+  background: white;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
+
+  &__header,
+  &__details {
+    margin-bottom: 24px;
+    border-bottom: 1px solid $grey-l1;
+  }
+
+  &__details {
+    padding-bottom: 24px;
+    font-size: .75rem;
+  }
+
+  &__info {
+    & > .spx-apanel {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.stui-uheader {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+  }
+}
+
+.stui-udetail {
+  display: flex;
+  margin-bottom: 12px;
+
+  &__label {
+    flex: 1;
+  }
+}

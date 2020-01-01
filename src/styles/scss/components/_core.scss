@@ -1,0 +1,21 @@
+.stui-core {
+  display: flex;
+  height: 100vh;
+}
+
+.stui-grid {
+  display: grid;
+  grid: 1fr / 1fr;
+  grid-gap: 12px;
+
+  &--2 {
+    grid: 1fr / 1fr 1fr;
+  }
+}
+
+.stui-tile {
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  @include elevation-1;
+}

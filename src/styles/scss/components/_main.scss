@@ -1,0 +1,130 @@
+body {
+  background: $grey-l1;
+}
+
+.stui-main {
+  flex: 1;
+  position: relative;
+  margin: 0 auto;
+  padding: 48px;
+  overflow-y: auto;
+
+  &__empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__pnl {
+    padding: 12px;
+    margin-bottom: 12px;
+    background: white;
+    border-radius: 12px;
+    box-shadow:
+      inset -2px -2px 6px rgba(0, 0, 0, 0),
+      inset 2px 2px 6px rgba(255, 255, 255, 0),
+      -2px -2px 6px rgba(255, 255, 255, .3),
+      2px 2px 6px rgba(0, 0, 0, .3)
+    ;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.stui-mpnl {
+  height: 40vh;
+  max-height: 600px;
+  border: 1px solid $grey-l1;
+  overflow-y: auto;
+}
+
+.stui-grid {
+  display: grid;
+
+  &--2 {
+    grid: 1fr / 1fr 1fr;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.stui-cards {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.stui-card {
+  flex: 0 0 200px;
+  margin: 12px;
+  padding: 36px;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid $grey-l1;
+  cursor: pointer;
+  box-shadow:
+    inset -2px -2px 6px rgba(0, 0, 0, 0),
+    inset 2px 2px 6px rgba(255, 255, 255, 0),
+    -2px -2px 6px rgba(255, 255, 255, .3),
+    2px 2px 6px rgba(0, 0, 0, .3)
+  ;
+  transition: box-shadow .3s ease-in-out;
+
+  &:hover {
+    box-shadow:
+      inset -2px -2px 6px rgba(0, 0, 0, .3),
+      inset 2px 2px 6px rgba(255, 255, 255, .3),
+      -2px -2px 6px rgba(255, 255, 255, 0),
+      2px 2px 6px rgba(0, 0, 0, 0)
+    ;
+  }
+}
+
+.stui-mpane {
+  &__title {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $grey-l1;
+  }
+
+  &__addon {
+    margin: 6px 0 0;
+    text-align: right;
+
+    button {
+      background: transparent;
+    }
+  }
+}
+
+.stui-tdata {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #6c7df3;
+  border-radius: 6px;
+  border-collapse: separate;
+  font-size: .75rem;
+
+  tr {
+    th,
+    td {
+      padding: 2%;
+    }
+
+    th {
+      background: #6c7df3;
+      color: white;
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid #6c7df3;
+    }
+  }
+}

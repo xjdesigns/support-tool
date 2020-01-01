@@ -1,0 +1,49 @@
+.spx-apanel {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  @include elevation-1;
+  transition: box-shadow .3s ease;
+
+  &:hover {
+    @include elevation-2;
+  }
+
+  &--animated {
+    .spx-panel-actions {
+      margin-left: 12px;
+      overflow-y: hidden;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform .3s ease, opacity .3s ease;
+    }
+
+    &:hover {
+      @include elevation-2;
+
+      .spx-panel-actions {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__core {
+    margin-right: 12px;
+  }
+
+  &__title {
+    flex: 1;
+    text-align: left;
+  }
+
+  &__actions {
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  .spx-panel-actions {
+    margin-left: 12px;
+  }
+}

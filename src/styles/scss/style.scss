@@ -1,0 +1,49 @@
+// created by Jason Jacobson
+// THE NEW GENERATION OF CSS FRAMEWORKS
+// SEGMENT CSS
+
+///////////////////////////
+// IMPORT STYLESHEETS //
+///////////////////////////
+
+// BASE
+@import "base/var"; // all global variables should live here
+@import "base/base"; // base styling goes here
+@import "base/images"; // base image
+@import "base/icons"; // base icons
+@import "base/typography"; // base typography
+@import "base/forms"; // base typography
+
+// MIXIN
+@import "mixin/mixins"; // mixins for writing dry code
+@import "mixin/elevation"; // material elevation
+@import "mixin/disabled"; // Disabled mixin
+
+// ELEMENTS
+@import "elements/button"; // buttons
+@import "elements/typography"; // typography
+@import "elements/image"; // images
+@import "elements/video"; // videos
+@import "elements/progress-bar"; // Progress Bar styling
+@import "elements/pills"; // Progress Bar styling
+@import "elements/tab-nav"; // tabbed navigation
+@import "elements/steps-bar"; // steps bar
+@import "elements/form"; // form elements
+@import "elements/select"; // selectboxes
+@import "elements/range-slider"; // range slider
+@import "elements/radio"; // radio button
+@import "elements/checkbox"; // checkboxes
+@import "elements/toggle"; // toggle switch
+
+// COMPONENTS
+@import "components/core";
+@import "components/header";
+@import "components/upane";
+@import "components/main";
+@import "components/menu";
+@import "components/user-search";
+@import "components/action-panel";
+@import "components/loading";
+
+// HELPERS
+@import "helpers/helpers"; // Helper snippets

@@ -1,0 +1,82 @@
+// TODO:: ADD OR REMOVE
+//////////////////
+// STEPS BAR //
+//////////////////
+.steps-bar {
+  counter-reset: stepbar;
+  display: flex;
+  align-items: center;
+  font-size: .625rem;
+
+  li {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    counter-increment: stepbar;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &:before {
+      content: counter(stepbar);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      border-radius: 50%;
+      font-size: .75rem;
+      text-align: center;
+      line-height: 2;
+      background-color: $brand-primary;
+      color: $white;
+    }
+
+    &:last-child:after {
+      content: '';
+      flex: 0 0 auto;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      flex: 1 1 auto;
+      margin-left: 24px;
+      height: 2px;
+      background-color: $brand-primary;
+    }
+  }
+
+  &--required {
+    li {
+      color: $grey-l1;
+      cursor: not-allowed;
+
+      &:before {
+        background-color: $grey-l1;
+        color: $white;
+      }
+      &:not(:last-child):after {
+        background-color: $grey-l1;
+      }
+
+      &.is-active {
+        color: $black;
+        cursor: pointer;
+
+        &:before {
+          background-color: $brand-primary;
+          color: $white;
+        }
+        &:not(:last-child):after {
+          background-color: $brand-primary;
+        }
+      }
+    }
+  }
+}
