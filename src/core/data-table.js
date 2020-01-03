@@ -67,7 +67,7 @@ const DataTable = () => {
         </div>
       </form>
     </div>
-    <div className="spx-mg-bt-12">
+    <div className="spx-mg-bt-12 stui-tdata-wrap">
       <table className="stui-tdata">
         <thead>
           <tr>

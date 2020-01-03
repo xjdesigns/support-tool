@@ -4,9 +4,6 @@ import logo from './images/smartthings_sym.png'
 const Menu = () => {
   return (
     <div className="stui-menu">
-      {/* <div className="stui-menu__logo">
-        <img src={logo} alt="Smart Things Logo"/>
-      </div> */}
       <div className="stui-menu__pnl">
         <button className="stui-maction">
           <i className="material-icons">

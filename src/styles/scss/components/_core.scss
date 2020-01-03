@@ -1,6 +1,18 @@
 .stui-core {
   display: flex;
   height: 100vh;
+
+	&__base {
+		flex: 1;
+		display: flex;
+		flex-flow: nowrap column;
+		height: 100vh;
+	}
+}
+
+.stui-view {
+	flex: 1;
+	display: flex;
 }
 
 .stui-grid {

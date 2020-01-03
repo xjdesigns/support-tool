@@ -7,8 +7,9 @@
 .stui-upane {
   flex: 0 0 40%;
   padding: 48px;
+	max-width: 560px;
   background: white;
-  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
 
   &__header,
   &__details {
@@ -23,6 +24,8 @@
 
   &__info {
     & > .spx-apanel {
+			padding: 8px;
+			font-size: .75rem;
       margin-bottom: 12px;
     }
   }

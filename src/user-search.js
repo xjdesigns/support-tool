@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const UserSearch = ({ setSelected }) => {
   const [showList, setListVis] = useState(false)
+	let history = useHistory()
 
   const isVisible = ev => {
     if (ev.target.value.length > 0) {
@@ -10,6 +12,11 @@ const UserSearch = ({ setSelected }) => {
       setListVis(false)
     }
   }
+
+	const handleUser = () => {
+		history.push('/users/784ij8-ewpoitcd-2012shikd')
+		setSelected('users')
+	}
 
   return (
     <div className="stui-upane">
@@ -31,7 +38,7 @@ const UserSearch = ({ setSelected }) => {
         {showList && (
           <div className="stui-search-results">
             <p className="stui-search-results__label">results</p>
-            <ul onClick={() => setSelected('empty')}>
+            <ul onClick={handleUser}>
               <li>Jason Jacobson</li>
             </ul>
           </div>

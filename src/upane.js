@@ -1,6 +1,21 @@
 import React from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 
 const Upane = ({ handleSelection, setSelected }) => {
+	const base = `/users`
+	let history = useHistory()
+	const { userid } = useParams()
+
+	const handleLogout = () => {
+		history.push('/')
+		setSelected('')
+	}
+
+	const handleRoute = route => {
+		const r = `${base}/${userid}/${route}`
+		handleSelection(r)
+	}
+
   return (
     <div className="stui-upane">
       <div className="stui-upane__header">
@@ -13,7 +28,7 @@ const Upane = ({ handleSelection, setSelected }) => {
             <button
               className="spx-btn spx-btn--pr spx-btn--sm spx-btn--circle"
               data-icon="exit_to_app"
-              onClick={() => setSelected('none')}
+              onClick={handleLogout}
             />
           </div>
         </div>
@@ -49,7 +64,7 @@ const Upane = ({ handleSelection, setSelected }) => {
                 <button
                   className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
                   data-icon="keyboard_arrow_right"
-                  onClick={() => handleSelection('users')}
+                  onClick={() => handleRoute('users')}
               />
               </div>
             </div>
@@ -65,7 +80,7 @@ const Upane = ({ handleSelection, setSelected }) => {
                 <button
                   className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
                   data-icon="keyboard_arrow_right"
-                  onClick={() => handleSelection('automations')}
+                  onClick={() => handleRoute('automations')}
                 />
               </div>
             </div>
@@ -81,7 +96,7 @@ const Upane = ({ handleSelection, setSelected }) => {
                 <button
                   className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
                   data-icon="keyboard_arrow_right"
-                  onClick={() => handleSelection('devices')}
+                  onClick={() => handleRoute('devices')}
                 />
               </div>
             </div>
@@ -97,7 +112,7 @@ const Upane = ({ handleSelection, setSelected }) => {
                 <button
                   className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
                   data-icon="keyboard_arrow_right"
-                  onClick={() => handleSelection('devices')}
+                  onClick={() => handleRoute('devices')}
                 />
               </div>
             </div>
@@ -113,7 +128,7 @@ const Upane = ({ handleSelection, setSelected }) => {
                 <button
                   className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
                   data-icon="keyboard_arrow_right"
-                  onClick={() => handleSelection('devices')}
+                  onClick={() => handleRoute('devices')}
                 />
               </div>
             </div>
