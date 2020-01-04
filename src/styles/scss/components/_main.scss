@@ -1,12 +1,12 @@
 body {
-  background: $grey-l1;
+  background: white;
 }
 
 .stui-main {
   flex: 1;
   position: relative;
   margin: 0 auto;
-  padding: 48px;
+  // padding: 12px;
 	height: calc(100vh - 45px);
   overflow-y: auto;
 
@@ -15,19 +15,31 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .8);
+    z-index: 0;
   }
 
   &__pnl {
     padding: 12px;
     margin-bottom: 12px;
     background: white;
-    border-radius: 12px;
-    box-shadow:
-      inset -2px -2px 6px rgba(0, 0, 0, 0),
-      inset 2px 2px 6px rgba(255, 255, 255, 0),
-      -2px -2px 6px rgba(255, 255, 255, .3),
-      2px 2px 6px rgba(0, 0, 0, .3)
-    ;
+    border-bottom: 1px solid var(--grey-l1);
+    // border-radius: 12px;
+    // box-shadow:
+    //   inset -2px -2px 6px rgba(0, 0, 0, 0),
+    //   inset 2px 2px 6px rgba(255, 255, 255, 0),
+    //   -2px -2px 6px rgba(255, 255, 255, .3),
+    //   2px 2px 6px rgba(0, 0, 0, .3)
+    // ;
 
     &:last-child {
       margin-bottom: 0;

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Switch, Route, useHistory, useLocation } from 'react-router-dom'
 import Header from './header'
+import UserSearch from './user-search'
 import Menu from './menu'
 import Upane from './upane'
 import Main from './main'
-import UserSearch from './user-search'
+import Overview from './overview'
 
 const App = () => {
 	const [selected, setSelected] = useState('')
@@ -41,6 +42,7 @@ const App = () => {
 									selected={selected}
 									setSelected={setSelected}
 								/>
+                <Overview />
 							</>
 						</Route>
 

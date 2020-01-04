@@ -29,5 +29,5 @@
   padding: 12px;
   background: white;
   border-radius: 6px;
-  @include elevation-1;
+  border: 1px solid var(--grey-l1);
 }

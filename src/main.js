@@ -19,13 +19,16 @@ const Main = ({ base, loading, setSelected }) => {
 			{/* // Move this to the component as it would live
 			// with the Query graphql component */}
       {loading && (
-        <div className="stui-main__empty">
-          <div className="spx-loading">
-            <div className="spx-loading__dots"></div>
-            <div className="spx-loading__dots"></div>
-            <div className="spx-loading__dots"></div>
+        <>
+          <div className="stui-main__empty">
+            <div className="spx-loading">
+              <div className="spx-loading__dots"></div>
+              <div className="spx-loading__dots"></div>
+              <div className="spx-loading__dots"></div>
+            </div>
           </div>
-        </div>
+          <div className="stui-main__overlay" />
+        </>
       )}
 
 			<Switch>

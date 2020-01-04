@@ -1,0 +1,13 @@
+.spx-apanel {
+  background: white;
+  border: 1px solid var(--grey-l1);
+  box-shadow: none;
+}
+
+.spx-ac,
+.spx-ac:hover,
+.spx-ac:focus,
+.spx-ac:active,
+.spx-ac.is-active {
+  box-shadow: none;
+}

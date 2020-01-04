@@ -41,9 +41,14 @@
 @import "components/upane";
 @import "components/main";
 @import "components/menu";
+@import "components/overview";
 @import "components/user-search";
 @import "components/action-panel";
 @import "components/loading";
+@import "components/accordion";
+
+// SPX OVERRIDES
+@import "components/spx-override";
 
 // HELPERS
 @import "helpers/helpers"; // Helper snippets

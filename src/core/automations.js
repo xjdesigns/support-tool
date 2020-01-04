@@ -7,13 +7,13 @@ const Automations = () => {
       <div className="spx-mg-bt-12">
         <div className="stui-grid stui-grid--2">
           <div className="stui-tile">
-            <h5>IF</h5>
+            <h6>IF</h6>
             <p>Multipurpose Sensor</p>
             <p>Contact sensor: open</p>
           </div>
 
           <div className="stui-tile">
-            <h5>THEN</h5>
+            <h6>THEN</h6>
             <p>Send text message</p>
             <p>sensor open</p>
             <p>Jason Jacobson</p>

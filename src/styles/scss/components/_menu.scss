@@ -1,24 +1,10 @@
 .stui-menu {
-  flex: 0 0 60px;
-  background: $grey-d1;
-
-  &__logo {
-    padding: 24px 12px;
-    background: #14bfff; // SM blue
-    background: linear-gradient(#14bfff, #009bd5);
-    border-bottom: 1px solid $grey-d1;
-
-    img {
-      margin: auto;
-      display: block;
-      max-width: 24px;
-      filter: brightness(0) invert(1);
-    }
-  }
+  flex: 0 0 44px;
+  background: var(--brand-tertiary);
 
   .stui-maction {
     width: 100%;
-    padding: 12px 6px;
+    padding: 8px 4px;
     background: transparent;
     color: white;
     text-align: center;

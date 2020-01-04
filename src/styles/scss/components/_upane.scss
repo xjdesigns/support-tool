@@ -5,16 +5,21 @@
 }
 
 .stui-upane {
-  flex: 0 0 40%;
-  padding: 48px;
-	max-width: 560px;
-  background: white;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+  flex: 0 0 30%;
+  padding: 24px;
+	max-width: 300px;
+  background: var(--grey-l2);
+  border-right: 1px solid var(--grey-l1);
+  // box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
 
   &__header,
   &__details {
     margin-bottom: 24px;
     border-bottom: 1px solid $grey-l1;
+  }
+
+  &__header {
+    padding: 3px;
   }
 
   &__details {
@@ -26,7 +31,7 @@
     & > .spx-apanel {
 			padding: 8px;
 			font-size: .75rem;
-      margin-bottom: 12px;
+      margin-bottom: 3px;
     }
   }
 }
@@ -41,10 +46,10 @@
 }
 
 .stui-udetail {
-  display: flex;
+  // display: flex;
   margin-bottom: 12px;
 
-  &__label {
-    flex: 1;
-  }
+  // &__label {
+  //   flex: 1;
+  // }
 }

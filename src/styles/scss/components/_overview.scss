@@ -1,0 +1,44 @@
+.stui-overview-pane {
+  flex: 0 0 44px;
+  padding: 12px;
+  background: var(--grey-l2);
+  // font-size: .75rem;
+
+  &.is-open {
+    flex: 0 0 300px;
+  }
+
+  &__action {
+    text-align: right;
+    margin-bottom: 12px;
+  }
+}
+
+.stui-opane {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--grey-l1);
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      p {
+        flex: 1;
+        font-size: .75rem;
+      }
+
+      .spx-btn {
+        border-color: transparent;
+      }
+    }
+  }
+}

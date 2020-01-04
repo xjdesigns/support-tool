@@ -21,7 +21,7 @@ const Upane = ({ handleSelection, setSelected }) => {
       <div className="stui-upane__header">
         <div className="stui-uheader">
           <div className="stui-uheader__title">
-            <h4>User Information</h4>
+            <h6>User Information</h6>
           </div>
 
           <div className="stui-uheader__actions">
@@ -36,19 +36,19 @@ const Upane = ({ handleSelection, setSelected }) => {
 
       <div className="stui-upane__details">
         <div className="stui-udetail">
-          <div className="stui-udetail__label">Username</div>
+          <div className="stui-udetail__label"><strong>Username</strong></div>
           <div className="stui-udetail__desc">jason.jacobson</div>
         </div>
         <div className="stui-udetail">
-          <div className="stui-udetail__label">UUID</div>
+          <div className="stui-udetail__label"><strong>UUID</strong></div>
           <div className="stui-udetail__desc">784ij8-ewpoitcd-2012shikd</div>
         </div>
         <div className="stui-udetail">
-          <div className="stui-udetail__label">Email</div>
+          <div className="stui-udetail__label"><strong>Email</strong></div>
           <div className="stui-udetail__desc">jason.jacobson@smartthings.com</div>
         </div>
         <div className="stui-udetail">
-          <div className="stui-udetail__label">SAID</div>
+          <div className="stui-udetail__label"><strong>SAID</strong></div>
           <div className="stui-udetail__desc">32oij8-ewpodpmos-3487shikd</div>
         </div>
       </div>
