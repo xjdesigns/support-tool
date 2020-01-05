@@ -12,8 +12,8 @@
     transition: background .3s ease-in-out, color .3s ease-in-out;
 
     &:hover {
-      background: $grey-l1;
-      color: $grey-d1;
+      background: var(--grey-l1);
+      color: var(--brand-primary);
     }
 
     i {

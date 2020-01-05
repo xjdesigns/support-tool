@@ -4,6 +4,7 @@ import Dialog from './core/dialog'
 
 const Upane = ({ handleSelection, setSelected }) => {
   const [dialogOpen, toggleDialog] = useState(false)
+  const [moreInfo, toggleMoreInfo] = useState(false)
 	const base = `/users`
 	let history = useHistory()
 	const { userid } = useParams()
@@ -62,6 +63,26 @@ const Upane = ({ handleSelection, setSelected }) => {
           <div className="stui-udetail__label"><strong>SAID</strong></div>
           <div className="stui-udetail__desc">32oij8-ewpodpmos-3487shikd</div>
         </div>
+
+        {moreInfo && (
+          <>
+          <div className="stui-udetail">
+            <div className="stui-udetail__label"><strong>Date added</strong></div>
+            <div className="stui-udetail__desc">11/12/2019</div>
+          </div>
+          <div className="stui-udetail">
+            <div className="stui-udetail__label"><strong>Last updated</strong></div>
+            <div className="stui-udetail__desc">1/2/2020</div>
+          </div>
+          </>
+        )}
+
+        <button
+          className="spx-btn spx-btn--pr--inverted spx-btn--sm"
+          onClick={() => toggleMoreInfo(!moreInfo)}
+        >
+          {moreInfo ? 'show less' : 'show more'}
+        </button>
       </div>
 
 
@@ -181,10 +202,11 @@ const Upane = ({ handleSelection, setSelected }) => {
 
       {dialogOpen && (
         <Dialog
-          text="Are you sure you want to leave impersonation?"
           cancelAction={cancelAction}
           confirmAction={confirmAction}
-        />
+        >
+          <p>Are you sure you want to leave impersonation?</p>
+        </Dialog>
       )}
     </div>
   )

@@ -4,10 +4,18 @@ const Automations = () => {
   const [isopen, toggleOpen] = useState(true)
 
   return (
+    <>
     <div className="stui-main__pnl">
       <div className="stui-mpanel">
         <div className="stui-mpanel__title">
           <h5>Automations</h5>
+        </div>
+      </div>
+    </div>
+    <div className="stui-main__pnl">
+      <div className="stui-mpanel stui-mpanel--space">
+        <div className="stui-mpanel__title">
+          <h6>Contact sensor</h6>
         </div>
         <div className="stui-mpanel__action">
           <button
@@ -36,6 +44,7 @@ const Automations = () => {
         </div>
       )}
     </div>
+    </>
   )
 }
 

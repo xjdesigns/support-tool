@@ -29,13 +29,8 @@ body {
 
   &__pnl {
     padding: 12px;
-    margin-bottom: 12px;
     background: white;
     border-bottom: 1px solid var(--grey-l1);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -58,6 +53,10 @@ body {
 .stui-mpanel {
   display: flex;
   align-items: center;
+
+  &--space {
+    padding: 6px 0;
+  }
 
   &__title {
     flex: 1;

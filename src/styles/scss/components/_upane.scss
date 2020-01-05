@@ -8,9 +8,10 @@
   flex: 0 0 30%;
   padding: 24px;
 	max-width: 300px;
+	height: calc(100vh - 45px);
   background: var(--grey-l2);
   border-right: 1px solid var(--grey-l1);
-  // box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 
   &__header,
   &__details {

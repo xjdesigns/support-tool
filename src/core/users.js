@@ -19,10 +19,19 @@ const Locations = () => {
   }]
 
   return (
+    <>
     <div className="stui-main__pnl">
       <div className="stui-mpanel">
         <div className="stui-mpanel__title">
           <h5>Locations</h5>
+        </div>
+      </div>
+    </div>
+    <div className="stui-main__pnl">
+      <div className="stui-mpanel stui-mpanel--space">
+        <div className="stui-mpanel__title">
+          {/* // class is required to flex */}
+          {/* <h5>Locations</h5> */}
         </div>
         <div className="stui-mpanel__action">
           <button
@@ -44,10 +53,11 @@ const Locations = () => {
             data={LOCATON_DATA}
             columns={columns}
             filterable={filterable}
+            showPageSizeOptions={false}
             SubComponent={row => {
               return (
                 <ReactJson
-                  src={row}
+                  src={row.original}
                   theme="solarized"
                   enableClipboard={false}
                 />
@@ -57,6 +67,7 @@ const Locations = () => {
         </div>
       )}
     </div>
+    </>
   )
 }
 

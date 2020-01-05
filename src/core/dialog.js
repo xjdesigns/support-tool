@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Dialog = ({ text, cancelAction, confirmAction }) => {
+const Dialog = ({ text, cancelAction, confirmAction, children }) => {
   return (
     <>
       <div className="stui-dialog">
         <div className="stui-dialog__content">
-          <p>{text}</p>
+          {children}
         </div>
 
         <div className="stui-dialog__actions">
