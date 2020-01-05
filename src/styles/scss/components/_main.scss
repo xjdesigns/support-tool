@@ -6,7 +6,6 @@ body {
   flex: 1;
   position: relative;
   margin: 0 auto;
-  // padding: 12px;
 	height: calc(100vh - 45px);
   overflow-y: auto;
 
@@ -15,7 +14,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1999;
   }
 
   &__overlay {
@@ -25,7 +24,7 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, .8);
-    z-index: 0;
+    z-index: 1998;
   }
 
   &__pnl {
@@ -33,13 +32,6 @@ body {
     margin-bottom: 12px;
     background: white;
     border-bottom: 1px solid var(--grey-l1);
-    // border-radius: 12px;
-    // box-shadow:
-    //   inset -2px -2px 6px rgba(0, 0, 0, 0),
-    //   inset 2px 2px 6px rgba(255, 255, 255, 0),
-    //   -2px -2px 6px rgba(255, 255, 255, .3),
-    //   2px 2px 6px rgba(0, 0, 0, .3)
-    // ;
 
     &:last-child {
       margin-bottom: 0;
@@ -63,87 +55,17 @@ body {
   }
 }
 
-.stui-cards {
+.stui-mpanel {
   display: flex;
-  flex-flow: wrap row;
-}
+  align-items: center;
 
-.stui-card {
-  flex: 0 0 200px;
-  margin: 12px;
-  padding: 36px;
-  text-align: center;
-  border-radius: 12px;
-  border: 1px solid $grey-l1;
-  cursor: pointer;
-  box-shadow:
-    inset -2px -2px 6px rgba(0, 0, 0, 0),
-    inset 2px 2px 6px rgba(255, 255, 255, 0),
-    -2px -2px 6px rgba(255, 255, 255, .3),
-    2px 2px 6px rgba(0, 0, 0, .3)
-  ;
-  transition: box-shadow .3s ease-in-out;
-
-  &:hover {
-    box-shadow:
-      inset -2px -2px 6px rgba(0, 0, 0, .3),
-      inset 2px 2px 6px rgba(255, 255, 255, .3),
-      -2px -2px 6px rgba(255, 255, 255, 0),
-      2px 2px 6px rgba(0, 0, 0, 0)
-    ;
-  }
-}
-
-.stui-mpane {
   &__title {
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid $grey-l1;
+    flex: 1;
   }
 
-  &__addon {
-    margin: 6px 0 0;
-    text-align: right;
-
+  &__action {
     button {
-      background: transparent;
-    }
-  }
-}
-
-.stui-tdata-wrap {
-	border: 1px solid #6c7df3;
-	border-radius: 6px;
-	overflow: auto;
-}
-
-.stui-tdata {
-  width: 100%;
-  text-align: left;
-  // border: 1px solid #6c7df3;
-  // border-radius: 6px;
-  border-collapse: separate;
-  font-size: .75rem;
-
-  tr {
-    th,
-    td {
-      padding: .75em;
-    }
-
-    th {
-      background: #6c7df3;
-      color: white;
-    }
-
-    &:last-child {
-      td {
-        border-bottom: none;
-      }
-    }
-
-    td {
-      border-bottom: 1px solid #6c7df3;
+      margin-left: 3px;
     }
   }
 }

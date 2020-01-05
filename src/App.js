@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Switch, Route, useHistory, useLocation } from 'react-router-dom'
+import { Switch, Route, useHistory } from 'react-router-dom'
 import Header from './header'
 import UserSearch from './user-search'
 import Menu from './menu'
@@ -11,7 +11,6 @@ const App = () => {
 	const [selected, setSelected] = useState('')
 	const [loading, setLoading] = useState(false)
 	let history = useHistory()
-	const loc = useLocation()
 	const base = `/users/:userid`
 
 	const handleSelection = selected => {

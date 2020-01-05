@@ -1,0 +1,18 @@
+.stui-dtable {
+  font-size: .75rem;
+
+  .ReactTable,
+  .rt-table {
+    border-radius: 6px;
+  }
+
+  .rt-th {
+    background: var(--brand-secondary);
+    color: white;
+    text-align: left;
+  }
+
+  .react-json-view {
+    padding: 12px;
+  }
+}

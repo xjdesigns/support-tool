@@ -2,7 +2,9 @@
   flex: 0 0 44px;
   padding: 12px;
   background: var(--grey-l2);
-  // font-size: .75rem;
+  font-size: .75rem;
+	height: calc(100vh - 45px);
+  overflow-y: auto;
 
   &.is-open {
     flex: 0 0 300px;
@@ -39,6 +41,16 @@
       .spx-btn {
         border-color: transparent;
       }
+    }
+  }
+}
+
+.spx-ac {
+  &.is-error {
+    background: #fddddd;
+
+    .spx-btn {
+      border-color: transparent;
     }
   }
 }

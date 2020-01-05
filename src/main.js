@@ -1,8 +1,9 @@
 import React from 'react'
 import { Switch, Route, useHistory, useParams } from 'react-router-dom'
 import DisplayPane from './core/display-pane'
-import DataTable from './core/data-table'
 import Automations from './core/automations'
+import Devices from './core/devices'
+import Locations from './core/users'
 
 const Main = ({ base, loading, setSelected }) => {
 	const basePath = `/users`
@@ -37,29 +38,19 @@ const Main = ({ base, loading, setSelected }) => {
 				</Route>
 
 				<Route path={`${base}/devices`}>
-					<div className="stui-main__pnl">
-						<DataTable />
-					</div>
+					<Devices />
 				</Route>
 
 				<Route path={`${base}/users`}>
-					<div className="stui-main__pnl">
-						<button
-							className="spx-btn spx-btn--sm spx-btn--pr--inverted spx-btn--circle"
-							data-icon="close"
-							onClick={handleBack}
-						/>
-
-						<div className="stui-mpnl">
-							<DisplayPane />
-						</div>
-					</div>
+					<Locations />
 				</Route>
 
 				<Route path={`${base}`}>
-					<div className="stui-main__empty">
-						<p>Nothing selected</p>
-					</div>
+					{!loading && (
+            <div className="stui-main__empty">
+  						<p>Nothing selected</p>
+  					</div>
+          )}
 				</Route>
 			</Switch>
     </main>

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import Dialog from './core/dialog'
 
 const Upane = ({ handleSelection, setSelected }) => {
+  const [dialogOpen, toggleDialog] = useState(false)
 	const base = `/users`
 	let history = useHistory()
 	const { userid } = useParams()
@@ -16,6 +18,15 @@ const Upane = ({ handleSelection, setSelected }) => {
 		handleSelection(r)
 	}
 
+  const confirmAction = () => {
+    handleLogout()
+    toggleDialog(false)
+  }
+
+  const cancelAction = () => {
+    toggleDialog(false)
+  }
+
   return (
     <div className="stui-upane">
       <div className="stui-upane__header">
@@ -28,7 +39,7 @@ const Upane = ({ handleSelection, setSelected }) => {
             <button
               className="spx-btn spx-btn--pr spx-btn--sm spx-btn--circle"
               data-icon="exit_to_app"
-              onClick={handleLogout}
+              onClick={() => toggleDialog(true)}
             />
           </div>
         </div>
@@ -167,6 +178,14 @@ const Upane = ({ handleSelection, setSelected }) => {
           </div>
         </div>
       </div>
+
+      {dialogOpen && (
+        <Dialog
+          text="Are you sure you want to leave impersonation?"
+          cancelAction={cancelAction}
+          confirmAction={confirmAction}
+        />
+      )}
     </div>
   )
 }

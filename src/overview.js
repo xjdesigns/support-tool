@@ -16,7 +16,29 @@ const Overview = () => {
       {isopen && (
         <>
           <div className="stui-overview-pane__content">
-            <Accordion title="hubs offline" secondary="6">
+            <Accordion title="Errors" secondary="1" open error>
+              <div className="stui-opane">
+                <ul>
+                  <li>
+                    <p>Cannot register device</p>
+                    <button
+                      className="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+                      data-icon="keyboard_arrow_right"
+                    />
+                  </li>
+
+                  <li>
+                    <p>Name conflict (sim btn 2)</p>
+                    <button
+                      className="spx-btn spx-btn--pr--inverted spx-btn--circle spx-btn--sm"
+                      data-icon="keyboard_arrow_right"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </Accordion>
+
+            <Accordion title="hubs offline" secondary="6" open>
               <div className="stui-opane">
                 <ul>
                   <li>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-const Accordion = ({ title, secondary, children }) => {
-  const [isActive, toggleActive] = useState(true)
+const Accordion = ({ title, secondary, children, open = false, error }) => {
+  const [isActive, toggleActive] = useState(open)
 
   return (
-    <div className={`spx-ac ${isActive ? 'is-active' : ''}`}>
+    <div className={`spx-ac ${isActive ? 'is-active' : ''} ${error ? 'is-error' : ''}`}>
       <div className="spx-ac__pane">
         <div className="spx-ac-title">
           <strong>{title}</strong>
