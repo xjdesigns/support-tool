@@ -1,0 +1,20 @@
+.stui-logo-svg {
+  svg {
+    fill: transparent;
+    stroke: var(--brand-primary);
+    stroke-width: 0.5;
+  }
+
+  svg path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 1s ease infinite alternate;
+  }
+
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+}

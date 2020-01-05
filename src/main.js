@@ -4,6 +4,7 @@ import DisplayPane from './core/display-pane'
 import Automations from './core/automations'
 import Devices from './core/devices'
 import Locations from './core/users'
+import Logo from './core/logo'
 
 const Main = ({ base, loading, setSelected }) => {
 	const basePath = `/users`
@@ -27,6 +28,9 @@ const Main = ({ base, loading, setSelected }) => {
               <div className="spx-loading__dots"></div>
               <div className="spx-loading__dots"></div>
             </div>
+            {/* <div className="stui-logo-svg">
+              <Logo />
+            </div> */}
           </div>
           <div className="stui-main__overlay" />
         </>
