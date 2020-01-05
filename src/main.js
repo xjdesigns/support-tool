@@ -23,14 +23,14 @@ const Main = ({ base, loading, setSelected }) => {
       {loading && (
         <>
           <div className="stui-main__empty">
-            <div className="spx-loading">
+            {/* <div className="spx-loading">
               <div className="spx-loading__dots"></div>
               <div className="spx-loading__dots"></div>
               <div className="spx-loading__dots"></div>
-            </div>
-            {/* <div className="stui-logo-svg">
-              <Logo />
             </div> */}
+            <div className="stui-logo-svg">
+              <Logo />
+            </div>
           </div>
           <div className="stui-main__overlay" />
         </>

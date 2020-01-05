@@ -7,7 +7,7 @@ const Logo = () => {
       id="newlogo"
       x="0px"
       y="0px"
-      viewBox="0 0 478.2 94.1"
+      viewBox="0 0 94 94"
       xmlSpace="preserve"
     >
       <g>

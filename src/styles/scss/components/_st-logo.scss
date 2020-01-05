@@ -1,8 +1,11 @@
 .stui-logo-svg {
+  width: 200px;
+
   svg {
     fill: transparent;
     stroke: var(--brand-primary);
     stroke-width: 0.5;
+    animation: fill 1s ease infinite alternate;
   }
 
   svg path {
@@ -17,4 +20,9 @@
     }
   }
 
+  @keyframes fill {
+    0% {
+      fill: var(--brand-primary);
+    }
+  }
 }
